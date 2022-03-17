@@ -4,7 +4,7 @@
 * [Setup](#setup)
 
 ## General info
--This project is about creating a REST API that converts currency rates between EUR, USD and CHF (all ways).
+- This project is about creating a REST API that converts currency rates between EUR, USD and CHF (all ways).
 - In [main brahch] the user is able to convert with no need to singup or login 
 - In [currency_converter_with_authentication branch], the user should has a registered account to be able to convert currencies 
 	
@@ -16,7 +16,7 @@ Project is created with:
 
 
 ## Setup
-1.To run this project, you can clone it or download the zip file and use any IDE that supports javascript 
-2.To run the project without authentication you can use the [main branch] or use [currency_converter_with_authentication branch] to run it with authentication 
-3.In the main folder where all the files exists, you run [npm install] in the terminal to install all the libraries required.
-4.After that you run[nodemon] to run the code.
+Markup : 1. To run this project, you can clone it or download the zip file and use any IDE that supports javascript 
+2. To run the project without authentication you can use the [main branch] or use [currency_converter_with_authentication branch] to run it with authentication 
+3. In the main folder where all the files exists, you run [npm install] in the terminal to install all the libraries required.
+4. After that you run[nodemon] to run the code.
