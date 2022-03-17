@@ -43,9 +43,3 @@ Project is created with:
 
 * Get all the conversions from DB
 ![get all the value history endpoint](https://user-images.githubusercontent.com/44136023/158785860-b2d80f37-9550-4b31-a3f4-96fb41fee12c.PNG)
-
-* Authentication failed
-![conversion authentication failed](https://user-images.githubusercontent.com/44136023/158786588-dde94545-b940-44e5-9346-6b68ca57b9d5.PNG)
-
-* Successful Authentication
-![successfull authentication](https://user-images.githubusercontent.com/44136023/158787099-266edaad-fbeb-4df6-be86-a340fb42a3d2.PNG)
