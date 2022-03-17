@@ -23,7 +23,6 @@ const register = async (req, res, next) => {
   } else {
     // Insert new user
     let user = new User({
-      _id: mongoose.Types.ObjectId(),
       name: req.body.name,
       email: req.body.email,
       password: req.body.password

@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
 
-const User = mongoose.model('user', new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
-  
+const User = mongoose.model('user', new mongoose.Schema({  
   name: {
     type: String,
     required: true,
@@ -23,9 +21,10 @@ const User = mongoose.model('user', new mongoose.Schema({
     minlength: 5,
     maxlength: 1024
   },
-  Conversion: {
+  conversion: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Conversion",
+    ref: 'Conversion',
+    required: true,
   },
 }));
 

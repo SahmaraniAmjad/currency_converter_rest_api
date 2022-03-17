@@ -6,7 +6,6 @@ Start
 schema represent how our conversion data will look
 */
 const Conversion = mongoose.model('conversions', new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
   currencyFrom: {
     type: String,
     required: true,
@@ -29,7 +28,7 @@ const Conversion = mongoose.model('conversions', new mongoose.Schema({
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User"
+    ref: 'User'
   },
 }));
 /* End */

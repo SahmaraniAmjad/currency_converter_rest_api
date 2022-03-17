@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const _ = require('lodash');
 const fetch = require('node-fetch');
 const { Conversion, validate } = require('../models/conversion.model');
+const { User } = require('../models/user.model');
 
 /*
 Start
@@ -67,7 +68,6 @@ const addConversion = async (req, res) => {
     });
   };
   let conversion = await new Conversion({
-    _id: mongoose.Types.ObjectId(),
     currencyFrom: data.currencyFrom,
     currencyTo: data.currencyTo,
     amountInitial: data.amountInitial,
@@ -94,7 +94,7 @@ const getAllConversions = (req, res, next) => {
   // send all the parameters without _id and __v
   Conversion.find({}, { _id: 0, __v: 0 }, (err, allConversions) => {
     if (err) {
-      console.log(err);
+      res.status(401).send({message: err});
     } else {
       res.status(200).send({ ConversionHistory: allConversions });
     }
@@ -106,22 +106,41 @@ const getAllConversions = (req, res, next) => {
 Start
 get histroy conversion per user
 */
-const getconversionsById = (req, res, next) => {
-  Conversion
-    .find()
-    .populate("user")
-    .then(user => {
-      res.json(user);
-    }).catch(err => {
-      res.status(400).json({
-        error: err.message
-      })
+function getConversionsByUser(id) {
+  return Conversion.findOne({ id: id })
+    .populate('user').exec((error, conversions) => {
+      if (error) {
+        return console.log(error);
+      } else {
+        return console.log("Conversions: " + conversions);
+      }
     })
-}
+};
+
+// const conversions_get_conversions = (req, res, next) => {
+//   User.findById(req.params.id)
+//     .populate("conversion")
+//     .exec()
+//     .then(conversion => {
+//       if (!conversion) {
+//         return res.status(404).json({
+//           message: "User not found"
+//         });
+//       }
+//       res.status(200).json({
+//         result: conversion,
+//       });
+//     })
+//     .catch(err => {
+//       res.status(500).json({
+//         error: err.message
+//       });
+//     });
+// };
 /* End */
 
 module.exports = {
   getAllConversions,
   addConversion,
-  getconversionsById,
+  getConversionsByUser,
 };
