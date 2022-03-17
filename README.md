@@ -29,3 +29,17 @@ Project is created with:
 
 * EUR to CHF Conversion
 ![EUR to CHF conversion](https://user-images.githubusercontent.com/44136023/158785200-43e66dc5-9541-404d-8cda-e05ae3162f6d.PNG)
+
+* USD to CHF Conversion
+![USD to CHF conversion](https://user-images.githubusercontent.com/44136023/158785388-c97ad825-4c99-4e38-af4d-cddcd6f5f76a.PNG)
+
+* Currency's parameter restrictions
+![length of currency From is less than 3 char](https://user-images.githubusercontent.com/44136023/158785510-895c97a3-6fe6-447a-a3cc-cb5e74c8df12.PNG)
+
+![currency is not allwoed to be empty](https://user-images.githubusercontent.com/44136023/158785623-3c0655a6-d13b-474c-a286-e434ec5c247c.PNG)
+
+* Intial amount restriction
+![number must be positive](https://user-images.githubusercontent.com/44136023/158785775-8281e043-cae0-4540-846c-60ec8a01305d.PNG)
+
+* Get all the conversions from DB
+![get all the value history endpoint](https://user-images.githubusercontent.com/44136023/158785860-b2d80f37-9550-4b31-a3f4-96fb41fee12c.PNG)
