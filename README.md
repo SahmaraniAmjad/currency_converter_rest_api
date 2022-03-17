@@ -24,3 +24,8 @@ Project is created with:
 6.   You have 4 "endpoints". **/convert**, **/history**, **/signup**, and **/login**
 7.   As testing environment you can use **Postman**
 8.   You should add a **.env** where you will add **API_KEY** to fetch currencies rates, **DB_Connection** for mongodb, **JWT_KEY** for Authentication.
+
+## Test cases
+
+* EUR to CHF Conversion
+![EUR to CHF conversion](https://user-images.githubusercontent.com/44136023/158785200-43e66dc5-9541-404d-8cda-e05ae3162f6d.PNG)
