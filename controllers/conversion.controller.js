@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const _ = require('lodash');
 const fetch = require('node-fetch');
 const { Conversion, validate } = require('../models/conversion.model');
-require('dotenv/config');
 
 /*
 Start
@@ -103,7 +102,26 @@ const getAllConversions = (req, res, next) => {
 };
 /* End */
 
+/* 
+Start
+get histroy conversion per user
+*/
+const getconversionsById = (req, res, next) => {
+  Conversion
+    .find()
+    .populate("user")
+    .then(user => {
+      res.json(user);
+    }).catch(err => {
+      res.status(400).json({
+        error: err.message
+      })
+    })
+}
+/* End */
+
 module.exports = {
   getAllConversions,
   addConversion,
+  getconversionsById,
 };

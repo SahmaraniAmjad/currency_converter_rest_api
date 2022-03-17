@@ -1,10 +1,14 @@
 const express = require('express');
-const { addConversion, getAllConversions} = require('../controllers/conversion.controller');
-
+const { register, login } = require('../controllers/user.controller');
+const { addConversion, getconversionsById} = require('../controllers/conversion.controller');
+const checkAuth = require('../middleware/checkAuth');
 const router = express.Router();
 
-router.post('/convert', addConversion);
-router.get('/history', getAllConversions);
+router.post('/signup', register);
+router.post('/login', login);
+
+router.post('/convert', checkAuth, addConversion);
+router.get('/history', checkAuth, getconversionsById);
 
 module.exports = {
   routes: router
