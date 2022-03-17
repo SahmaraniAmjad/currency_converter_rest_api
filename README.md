@@ -20,6 +20,7 @@ Project is created with:
 2.   To run the project without authentication you can use the **main branch** or use **currency_converter_with_authentication branch** to run it with authentication.
 3.   In the main folder where all the files exists, you run **npm install** in the terminal to install all the libraries required.
 4.   After that you run **nodemon** to exucte the code.
-5.   You have 4 "endpoints". **/convert**, **/history**, **/signup**, and **/login**
-6.   As testing environment you can use **Postman**
-7.   You should add a **.env** where you will add **API_KEY** to fetch currencies rates, **DB_Connection** for mongodb, **JWT_KEY** for Authentication.
+5.   As a result you should get **Server is running on port xxxx** and **Connected to DB**
+6.   You have 4 "endpoints". **/convert**, **/history**, **/signup**, and **/login**
+7.   As testing environment you can use **Postman**
+8.   You should add a **.env** where you will add **API_KEY** to fetch currencies rates, **DB_Connection** for mongodb, **JWT_KEY** for Authentication.
