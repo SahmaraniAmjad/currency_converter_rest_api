@@ -24,7 +24,6 @@ const User = mongoose.model('user', new mongoose.Schema({
   conversion: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Conversion',
-    required: true,
   },
 }));
 
