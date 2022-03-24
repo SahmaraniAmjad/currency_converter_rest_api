@@ -21,10 +21,10 @@ const User = mongoose.model('user', new mongoose.Schema({
     minlength: 5,
     maxlength: 1024
   },
-  conversion: {
+  conversion: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Conversion',
-  },
+  }],
 }));
 
 /* 
