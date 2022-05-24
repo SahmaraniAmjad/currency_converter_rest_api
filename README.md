@@ -6,11 +6,11 @@
 - This project is about a Market place to sell and buy horses
 
 ## Setup
-1. To run this project, you can clone it or download the zip file and use any IDE 
+1. To run this project, you can clone it or download the zip file and use an IDE 
 2. To run the backend part: 
    - change the working directory to backend by running $ cd backend 
     - $ npm install  
-      - $ npm run start:dev 
+     - $ npm run start:dev 
 
 3. To run the frontend part: 
    - change the working directory to frontend by running $ cd frontend 
